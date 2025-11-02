@@ -1,0 +1,16 @@
+Übung 1: Einfache Methode testen
+
+Ziel: Du lernst, wie du mit JUnit 5 eine einfache Methode testest.
+
+🔹 Aufgabe:
+
+Erstelle eine Klasse Calculator mit einer Methode.
+Die Methode soll die Summe von a und b zurückgeben.
+
+Schreibe anschließend eine Testklasse CalculatorTest, in der du zwei Tests anlegst:
+
+Prüfe, ob add(2, 3) das Ergebnis 5 liefert.
+
+Prüfe, ob add(-1, 4) das Ergebnis 3 liefert.
+
+Nutze assertEquals(expected, actual) aus org.junit.jupiter.api.Assertions.
