@@ -1,0 +1,22 @@
+Übung 2: Methode mit Bedingung testen
+
+Ziel: Du lernst, Tests für Methoden mit Logik zu schreiben.
+
+🔹 Aufgabe:
+
+Erstelle eine Klasse NumberUtils mit der Methode:
+
+public boolean isEven(int number)
+
+
+Die Methode soll true zurückgeben, wenn die Zahl gerade ist, sonst false.
+
+
+
+Erstelle eine Testklasse NumberUtilsTest mit drei Tests:
+
+Teste eine gerade Zahl (z. B. 4) → erwartetes Ergebnis: true
+
+Teste eine ungerade Zahl (z. B. 7) → erwartetes Ergebnis: false
+
+Teste 0 → erwartetes Ergebnis: true
