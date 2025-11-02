@@ -1,0 +1,52 @@
+Übung 3: Rabattberechnung testen
+
+Ziel: Du lernst, wie man mehrere Fälle, Grenzwerte und Negativtests testet.
+Das ist ein typisches Beispiel, das in echten Programmen oft vorkommt.
+
+
+
+🔹 Aufgabe:
+
+Erstelle eine Klasse DiscountCalculator mit der Methode:
+
+public double calculateDiscount(double price)
+
+
+Die Methode soll folgende Logik umsetzen:
+
+Preis (€)	Rabatt (%)	Erklärung
+< 50		0		Kein Rabatt
+50 – 99.99	5		Kleiner Rabatt
+100 – 499.99	10		Standardrabatt
+≥ 500		20		Großkundenrabatt
+
+
+
+Wenn der Preis negativ ist, soll eine IllegalArgumentException geworfen werden.
+
+
+🧩 Beispiel:
+DiscountCalculator calc = new DiscountCalculator();
+System.out.println(calc.calculateDiscount(120)); // 12.0 (10 %)
+
+
+
+
+🔹 Tests (in DiscountCalculatorTest)
+
+Schreibe 5 Tests:
+
+Preis < 50 → kein Rabatt
+assertEquals(0, calculator.calculateDiscount(30));
+
+Preis = 80 → 5 % Rabatt
+assertEquals(4, calculator.calculateDiscount(80));
+
+Preis = 250 → 10 % Rabatt
+assertEquals(25, calculator.calculateDiscount(250));
+
+Preis = 600 → 20 % Rabatt
+assertEquals(120, calculator.calculateDiscount(600));
+
+Negativer Preis → Exception
+Verwende assertThrows(IllegalArgumentException.class, () -> calculator.calculateDiscount(-10));
